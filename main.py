@@ -30,13 +30,6 @@ with open(file_to_load, newline='') as election_data:
             
         else:
             candidate_votes[row["Candidate"]] = candidate_votes[row["Candidate"]] + 1
-
-#----------------------------------------------------------------------------------------
-    # Determine the Winner:
-    #if (votes > winner_votes[2]):
-     #   greatest_increase[1] = revenue_change
-      #  greatest_increase[0] = row["Candidate"]
-#----------------------------------------------------------------------------------------
     
     print()
     print()
@@ -70,7 +63,7 @@ with open(file_to_output, "w") as txt_file:
     txt_file.write("\n")
     txt_file.write("-------------------------")
     txt_file.write("\n")
-    #txt_file.write(candidate + " " + str(round(((candidate_votes[candidate]/votes)*100))) + "%" + " (" + str(candidate_votes[candidate]) + ")")
+    txt_file.write(candidate + " " + str(round(((candidate_votes[candidate]/votes)*100))) + "%" + " (" + str(candidate_votes[candidate]) + ")")
     txt_file.write(str(winner))
     txt_file.write("\n")
     txt_file.write("-------------------------")
