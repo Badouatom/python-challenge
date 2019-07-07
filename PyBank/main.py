@@ -35,8 +35,8 @@ with open(csvpath,newline='') as csvfile:
 
    max_decrease_Amount= min(Monthly_Amount_Change)
    #
-   max__decrease_month=Monthly_Amount_Change.index(max(Monthly_Amount_Change))
-   max_increase_month= Monthly_Amount_Change.index(max(Monthly_Amount_Change))
+   max__increase_month=Monthly_Amount_Change.index(max(Monthly_Amount_Change))+1
+   max_decrease_month= Monthly_Amount_Change.index(min(Monthly_Amount_Change))+1
    print(f" Greatest Increase in Profits:{Total_Months[max_increase_month]} (${(str(max_increase_Amount))})")
    print(f" Greatest Decrease in Profits: {Total_Months[max_decrease_month]} (${(str(max_decrease_Amount))})")
    
